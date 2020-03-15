@@ -11,6 +11,7 @@ public class AddItems {
 	@Id
 	public Integer itemCode;
 	public String itemName;
+	public Integer itemPrice;
 	public Integer getItemCode() {
 		return itemCode;
 	}
@@ -29,6 +30,5 @@ public class AddItems {
 	public void setItemPrice(Integer itemPrice) {
 		this.itemPrice = itemPrice;
 	}
-	public Integer itemPrice;
 
 }
