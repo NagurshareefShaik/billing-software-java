@@ -19,7 +19,9 @@ public class BillingController {
 	
 	@RequestMapping(value = "/getData",method = RequestMethod.GET)
 	public List<AddItems> getAddItemData(){
+		System.out.println("***getData Method starts*******");
 		List<AddItems> listData=addItemsRepo.findAll();
+		System.out.println("***getData Method ends*******");
 		return listData;
 	}
 
