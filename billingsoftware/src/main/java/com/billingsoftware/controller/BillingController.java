@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.billingsoftware.entity.AddItemEntity;
 import com.billingsoftware.model.AddItems;
 import com.billingsoftware.repositorty.AddItemsRepo;
 
@@ -26,15 +28,10 @@ public class BillingController {
 		System.out.println("***getData Method ends*******");
 		return listData;
 	}
-	@RequestMapping(value = "/insert",method = RequestMethod.POST)
-	public void insertData(AddItems addItems) {
-//		if(Objects.nonNull(addItems)) {
-//			addItemsRepo.save(addItems);
-//			return true;
-//		}
-//		else {
-//			return false;
-//		}
+	@RequestMapping(value = "/insert",method = RequestMethod.POST,consumes = "application/json")
+	@ResponseBody
+	public void insertData(@RequestBody AddItemEntity addItemsEntity) {
+		System.out.println(addItemsEntity);
 		System.out.println("insert");
 	}
 	
