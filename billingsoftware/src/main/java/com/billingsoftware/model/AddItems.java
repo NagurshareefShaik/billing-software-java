@@ -18,6 +18,16 @@ public class AddItems {
 	public void setItemCode(Integer itemCode) {
 		this.itemCode = itemCode;
 	}
+	public AddItems() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public AddItems(Integer itemCode, String itemName, Integer itemPrice) {
+		super();
+		this.itemCode = itemCode;
+		this.itemName = itemName;
+		this.itemPrice = itemPrice;
+	}
 	public String getItemName() {
 		return itemName;
 	}
