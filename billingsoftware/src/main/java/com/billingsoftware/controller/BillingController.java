@@ -19,10 +19,10 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value="/billing-software")
 @Slf4j
 public class BillingController {
-	
+
 	@Autowired
 	AddItemsRepo addItemsRepo;
-	
+
 	@RequestMapping(value = "/getData",method = RequestMethod.GET)
 	@ResponseBody
 	public List<AddItems> getAddItemData(){

@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class AddItemEntity {
-	
-	public  Integer itemCode;
+
+  public  Integer itemCode;
 	public  String itemName;
 	public  Integer itemPrice;
 
