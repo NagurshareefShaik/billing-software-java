@@ -10,11 +10,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "BillingInfo")
 public class BillingInformation {
-	
+
 	@Id
 	private int billNumber;
 	private Date billDate;
-//	private List<AddItems> items;
+	//	private List<AddItems> items;
 	private int totalAmount;
 	public int getBillNumber() {
 		return billNumber;
@@ -28,12 +28,12 @@ public class BillingInformation {
 	public void setBillDate(Date billDate) {
 		this.billDate = billDate;
 	}
-//	public List<AddItems> getItems() {
-//		return items;
-//	}
-//	public void setItems(List<AddItems> items) {
-//		this.items = items;
-//	}
+	//	public List<AddItems> getItems() {
+	//		return items;
+	//	}
+	//	public void setItems(List<AddItems> items) {
+	//		this.items = items;
+	//	}
 	public int getTotalAmount() {
 		return totalAmount;
 	}

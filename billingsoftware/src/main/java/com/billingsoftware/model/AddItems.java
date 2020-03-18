@@ -7,7 +7,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="ItemsTable",schema = "billingsoftware")
 public class AddItems {
-	
+
 	@Id
 	public Integer itemCode;
 	public String itemName;
