@@ -1,4 +1,4 @@
-package com.billingsoftware.entity;
+package com.billingsoftware.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

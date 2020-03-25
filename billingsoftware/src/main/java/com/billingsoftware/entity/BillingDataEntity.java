@@ -2,6 +2,8 @@ package com.billingsoftware.entity;
 
 import java.util.List;
 
+import com.billingsoftware.model.BillingItems;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

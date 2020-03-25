@@ -5,10 +5,8 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-
-import com.billingsoftware.entity.BillingItems;
 
 import lombok.Data;
 
@@ -21,7 +19,7 @@ public class BillingData {
 	private int billNumber;
 	private Date billDate;
 	private int totalAmount;
-	@OneToMany(targetEntity = BillingItems.class)
+	@ManyToMany(targetEntity = BillingItems.class)
 	private List<BillingItems> billingItems;
 	
 }

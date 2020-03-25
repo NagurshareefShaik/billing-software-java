@@ -4,8 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
 @Table(name="ItemsTable",schema = "billingsoftware")
+@Data
 public class AddItems {
 
 	@Id
@@ -28,17 +31,6 @@ public class AddItems {
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
 	}
-	public String getItemName() {
-		return itemName;
-	}
-	public void setItemName(String itemName) {
-		this.itemName = itemName;
-	}
-	public Integer getItemPrice() {
-		return itemPrice;
-	}
-	public void setItemPrice(Integer itemPrice) {
-		this.itemPrice = itemPrice;
-	}
+
 
 }
