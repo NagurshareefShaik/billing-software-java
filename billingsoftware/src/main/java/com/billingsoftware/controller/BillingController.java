@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -71,7 +73,6 @@ public class BillingController {
 	}
 	@RequestMapping(value = "/saveBillingData",method = RequestMethod.POST,consumes = "application/json")
 	@ResponseBody
-	@ResponseStatus
 	public void saveBillingData(@RequestBody BillingDataEntity billingDataEntity) {
 		BillingData billingData=this.formBillingData(billingDataEntity);
 		this.saveBillingItemData(billingData.getBillingItems());
@@ -102,12 +103,19 @@ public class BillingController {
 	 */
 	private BillingData formBillingData(BillingDataEntity billingDataEntity) {
 		BillingData data=new BillingData();
-		Date date=new Date(billingDataEntity.getBillDate());
+//		Date date=new Date(billingDataEntity.getBillDate());
 		data.setBillNumber(billingDataEntity.getBillNumber());
-		data.setBillDate(date);
+		data.setBillDate(null);
 		data.setBillingItems(billingDataEntity.getBillingItems());
 		data.setTotalAmount(billingDataEntity.getTotalAmount());
 		return data;
 		
+	}
+	@RequestMapping(value = "/getItemNames",method = RequestMethod.GET)
+	@ResponseBody
+	public List<AddItems> getItemNames(){
+		List<AddItems> listData=addItemsRepo.findAll();
+		List<String> itemNamesList=listData.stream().map(val->val.itemName).collect(Collectors.toList());
+		return listData;
 	}
 }
