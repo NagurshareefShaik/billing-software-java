@@ -16,5 +16,6 @@ public class BillingItems {
 	private String itemName;
     private int itemPrice;
     private int itemQuantity;
+    private int totalPrice;
 	
 }
