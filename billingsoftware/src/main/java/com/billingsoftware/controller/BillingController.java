@@ -92,6 +92,7 @@ public class BillingController {
 			billingItems.setItemCode(action.getItemCode());
 			billingItems.setItemName(action.getItemName());
 			billingItems.setItemPrice(action.getItemPrice());
+			billingItems.setTotalPrice(action.getTotalPrice());
 			billingItems.setItemQuantity(action.getItemQuantity());
 			billingItemsRepo.save(billingItems);
 		});
